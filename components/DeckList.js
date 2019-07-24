@@ -11,7 +11,12 @@ class DeckList extends React.Component{
                     const { title, questions} = decks[deck]
                     return(
                         <View>
-                            <Text>{title}</Text>
+                            <Text key={deck}>{title}</Text>
+                            <Text>{questions.length}
+                            {questions.length === 1
+                                ? ' Question'
+                                : ' Questions'
+                            }</Text>
                         </View>
                     )
                 })}
