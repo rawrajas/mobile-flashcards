@@ -4,9 +4,9 @@ import { saveDeckTitle } from '../utils/api'
 import { addDeck } from '../actions'
 import { connect } from 'react-redux'
 import SubmitButton from './SubmitButton'
-import { orange } from '../utils/colors'
+import { white } from '../utils/colors'
 
-class AdddDeck extends React.Component {
+class AddDeck extends React.Component {
 
     state = {
         text: ''
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
         borderWidth: 0.5,
         borderColor: '#d6d7da',
         padding: 10,
-        backgroundColor: orange,
+        backgroundColor: white,
         borderRadius: 7,
         overflow: 'hidden'
     },
 })
 
 
-export default connect()(AdddDeck)
+export default connect()(AddDeck)

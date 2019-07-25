@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavigationActions } from 'react-navigation'
-import { orange, white } from '../utils/colors'
+import { white } from '../utils/colors'
 import { addCardToDeck } from '../utils/api'
 import { connect } from 'react-redux'
 import { addCard } from '../actions'
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         borderWidth: 0.5,
         borderColor: '#d6d7da',
         padding: 10,
-        backgroundColor: orange,
+        backgroundColor: white,
         borderRadius: 7,
         overflow: 'hidden'
     },

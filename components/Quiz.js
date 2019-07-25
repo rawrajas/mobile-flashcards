@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavigationActions } from 'react-navigation'
 import { StyleSheet, Text, View, TouchableOpacity, KeyboardAvoidingView, Animated } from 'react-native'
-import { orange, white, purple, red, green } from '../utils/colors'
+import { white, darkBlue, red, turquoise } from '../utils/colors'
 import { SubmitButton } from './SubmitButton'
 import { connect } from 'react-redux'
 import ActionButton from './ActionButton'
@@ -141,12 +141,12 @@ class Quiz extends React.Component {
                             <Text style={styles.mainText}>You got {this.state.correct} out of {decks[deck].questions.length} !</Text>
                         </Animated.View>
 
-                        {this.state.correct > this.state.incorrect ?  <Animated.View style={rotateStyles}><Text style={{fontSize: 90}}>🕺</Text></Animated.View>
-                            : <Animated.View style={rotateStyles}><Text style={{fontSize: 90}}>😭😭😭</Text></Animated.View>}
+                        {this.state.correct > this.state.incorrect ?  <Animated.View style={rotateStyles}><Text style={{fontSize: 90}}>🥳</Text></Animated.View>
+                            : <Animated.View style={rotateStyles}><Text style={{fontSize: 90}}>😧</Text></Animated.View>}
 
                         <View>
-                            <ActionButton styles={styles} text={'TryAgain'} color={red} onPress={this.replayQuiz}/>
-                            <ActionButton styles={styles} text={'Back'} color={green} onPress={this.goBack}/>
+                            <ActionButton styles={styles} text={'Try Again'} color={red} onPress={this.replayQuiz}/>
+                            <ActionButton styles={styles} text={'Back'} color={turquoise} onPress={this.goBack}/>
                         </View>
                     </Animated.View>
                 </View>
@@ -164,7 +164,7 @@ class Quiz extends React.Component {
                         : <Info style={styles.answer} text={'Show Question'} onPress={this.showAnswer}></Info>}
 
                     <View>
-                        <ActionButton color={green} styles={styles} text={'Correct'} onPress={() => this.submitAnswer('true')}/>
+                        <ActionButton color={turquoise} styles={styles} text={'Correct'} onPress={() => this.submitAnswer('true')}/>
                         <ActionButton color={red} styles={styles} text={'Incorrect'} onPress={() => this.submitAnswer('false')}/>
                     </View>
                 </View>
@@ -195,13 +195,13 @@ const styles = StyleSheet.create({
         top: 0,
         alignSelf: 'flex-start',
         left: 0,
-        color: white,
+        color: darkBlue,
         fontSize: 20,
         margin: 5,
         position: 'absolute',
     },
     answer: {
-        color: white,
+        color: darkBlue,
         fontSize: 20,
         margin: 20,
     },
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         margin: 10,
-        backgroundColor: orange,
+        backgroundColor: white,
         alignSelf: 'stretch',
         borderRadius: 10,
         shadowColor: 'rgba(0,0,0,0.34)',
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
     },
     mainText: {
         fontSize: 40,
-        color: white,
+        color: darkBlue,
         marginTop: 40,
         textAlign: 'center'
     }

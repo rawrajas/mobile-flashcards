@@ -2,9 +2,10 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { getData } from '../utils/api'
 import { connect } from 'react-redux'
-import { purple, white, red, orange } from '../utils/colors'
+import { darkBlue, white, red } from '../utils/colors'
 import ActionButton from './ActionButton'
 import { getCardsLength } from '../utils/helpers'
+import { removeDeck} from "../utils/api";
 
 class DeckView extends React.Component {
     render(){
@@ -18,7 +19,7 @@ class DeckView extends React.Component {
                     <Text style={styles.mainText}>{decks[deck].title}</Text>
                     <Text style={styles.subText}>{questions ? getCardsLength(questions) : null}</Text>
 
-                    <ActionButton styles={styles} text={'Add Card'} color={purple}
+                    <ActionButton styles={styles} text={'Add Card'} color={darkBlue}
                                   onPress={() => this.props.navigation.navigate('AddCard', { entryId: deck })}/>
                     <ActionButton styles={styles}
                                   text={'Start Quiz'}
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
-        backgroundColor: orange,
+        backgroundColor: white,
         alignSelf: 'stretch',
         borderRadius: 10,
         shadowColor: 'rgba(0,0,0,0.34)',
@@ -71,11 +72,11 @@ const styles = StyleSheet.create({
     },
     mainText: {
         fontSize: 40,
-        color: white
+        color: darkBlue
     },
     subText: {
         fontSize: 30,
-        color: white,
+        color: darkBlue,
         marginBottom: 160
     }
 })

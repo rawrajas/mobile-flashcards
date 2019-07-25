@@ -4,7 +4,7 @@ import { getData } from '../utils/api'
 import { connect } from 'react-redux'
 import { getDecks } from '../utils/api'
 import { receiveDecks } from '../actions'
-import { orange, white } from '../utils/colors'
+import { white, darkBlue } from '../utils/colors'
 import { getCardsLength } from '../utils/helpers'
 
 class DeckList extends React.Component {
@@ -28,10 +28,9 @@ class DeckList extends React.Component {
                             <Text style={styles.cardText}>{questions ? getCardsLength(questions) : null}</Text>
 
                             <Button style={styles.cardBtn}
-                                    onPress={() => this.props.navigation.navigate('DeckView', {entryId: deck})}
-                                    title='view deck'>
-                            </Button>
-
+                                             onPress={() => this.props.navigation.navigate('DeckView', {entryId: deck})}
+                                             title='view deck'>
+                        </Button>
                         </View>
                     )
                 })}
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: orange,
+        backgroundColor: white,
         margin: 8,
         height: 200,
         borderRadius: 10,
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
     },
     cardText: {
         fontSize: 30,
-        color: white
+        color: darkBlue
     },
     cardBtn: {
         flex: 1,
