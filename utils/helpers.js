@@ -14,10 +14,12 @@ export const getCardsLength = (questions) => {
     }
 }
 
+//Notification
+
 function createNotification () {
     return {
-        title: 'Study study study',
-        body: '👋 do not forget to study today!',
+        title: 'Study time!',
+        body: 'Have you studied today?',
         ios: {
             sound: true
         }
