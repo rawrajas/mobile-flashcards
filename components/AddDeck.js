@@ -4,7 +4,7 @@ import { saveDeckTitle } from '../utils/api'
 import { addDeck } from '../actions'
 import { connect } from 'react-redux'
 import SubmitButton from './SubmitButton'
-import { white } from '../utils/colors'
+import { white, darkBlue } from '../utils/colors'
 
 class AddDeck extends React.Component {
 
@@ -27,7 +27,7 @@ class AddDeck extends React.Component {
     render(){
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>What is the new decks name?</Text>
+                <Text style={styles.title}>What would you like to call the new deck?</Text>
                 <TextInput style={styles.input}
                            onChangeText={(text) => this.setState({ text: text })}
                            value={this.state.text}>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 30,
-        color: '#333',
+        color: darkBlue,
         textAlign: 'center'
     },
     submitBtn: {
