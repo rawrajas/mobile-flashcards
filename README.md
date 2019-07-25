@@ -2,6 +2,10 @@
 
 Mobile Flashcards is a study app that allows the user to create and study flashcards.
 
+## Testing
+
+This has been tested on an Android simulator through Android Studio and Expo.
+
 ## Installation
 
 Install the following dependencies using yarn or npm:
